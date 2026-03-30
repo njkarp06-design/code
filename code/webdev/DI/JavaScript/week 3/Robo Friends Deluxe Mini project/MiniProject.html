@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RoboFriends Deluxe</title>
+  <link rel="stylesheet" href="MiniProject.css" />
+</head>
+
+<body>
+
+  <h1>🤖 RoboFriends Deluxe</h1>
+
+  <div class="controls">
+    <input type="text" id="searchBox" placeholder="Search robots..." />
+    
+    <select id="sortSelect">
+      <option value="none">Sort by</option>
+      <option value="az">Name A → Z</option>
+      <option value="za">Name Z → A</option>
+    </select>
+
+    <button id="toggleMode">Toggle Dark/Light</button>
+  </div>
+
+  <div class="container" id="robotContainer"></div>
+
+  <script src="miniProject.js"></script>
+</body>
+</html>
