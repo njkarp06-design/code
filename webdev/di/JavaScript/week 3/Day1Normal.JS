@@ -53,7 +53,7 @@ console.log([...country]);
 // ------Bonus------
 let newArray = [...[,,]];
 console.log(newArray);
-// Using the spread operator usedto create a new array with three empty parts so that the result comes out to be, [undefined, undefined, undefined]
+// Using the spread operator used to create a new array with three empty parts so that the result comes out to be, [undefined, undefined, undefined]
 
 // Excersise 4: Employees
 
