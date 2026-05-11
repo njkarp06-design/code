@@ -1,7 +1,7 @@
 import logo from './logo.svg';
-import './App.css';
-import UserFavoriteAnimals from './UserFavoriteAnimals';
-import Exercise from './Exercise3';
+import './app.css';
+import UserFavoriteAnimals from './userfavoriteanimals';
+import Exercise from './exercise3';
 const myelement = <h1>"I love JSX!"</h1>;
 const sum = 5 + 5; 
 const multipleElement = <p>"React is {sum} times better with JSX"</p>;

@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux'
-import { toggleTodo, removeTodo } from '../store/todoSlice'
+import { toggleTodo, removeTodo } from '../store/todoslice'
 import { AppDispatch } from '../store/store'
 
 interface TodoItemProps {

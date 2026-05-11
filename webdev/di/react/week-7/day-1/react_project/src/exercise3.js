@@ -1,5 +1,5 @@
 import React from 'react';
-import './Exercise.css';
+import './exercise.css';
 
 class Exercise extends React.Component {
   render() {

@@ -1,7 +1,7 @@
 // Exercise 3 - app.js
 // using the fileManager module to read and write files
 
-const { readFile, writeFile } = require("./fileManager");
+const { readFile, writeFile } = require("./filemanager");
 
 // reading content from Hello World.txt
 readFile("./hello-world.txt");

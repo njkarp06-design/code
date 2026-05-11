@@ -1,8 +1,8 @@
 import React from 'react';
-import { ThemeProvider, useTheme } from './ThemeContext';
-import ThemeToggle from './ThemeToggle';
-import CharacterCounter from './CharacterCounter';
-import './App.css';
+import { ThemeProvider, useTheme } from './themecontext';
+import ThemeToggle from './themetoggle';
+import CharacterCounter from './charactercounter';
+import './app.css';
 
 const themeStyles = {
   light: {

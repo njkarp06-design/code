@@ -1,8 +1,8 @@
-import './App.css'
-import Greeting from './components/Greeting'
-import Counter from './components/Counter'
-import UserCard from './components/UserCard'
-import UserList from './components/UserList'
+import './app.css'
+import Greeting from './components/greeting'
+import Counter from './components/counter'
+import UserCard from './components/usercard'
+import UserList from './components/userlist'
 
 function App() {
   return (

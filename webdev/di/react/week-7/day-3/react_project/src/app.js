@@ -1,6 +1,6 @@
 import React from 'react';
-import ErrorBoundary from './ErrorBoundary';
-import './App.css';
+import ErrorBoundary from './errorboundary';
+import './app.css';
 
 // ─── Exercise 1 ────────────────────────────────────────────────────────────────
 

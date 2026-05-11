@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 import { RootState } from '../store/store'
-import TodoItem from './TodoItem'
+import TodoItem from './todoitem'
 
 function TodoList() {
   const todos = useSelector((state: RootState) => state.todos.todos)

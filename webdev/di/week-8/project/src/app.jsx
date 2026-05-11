@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import quotes from './quotes'
-import './App.css'
+import './app.css'
 
 const colors = ['#16213e', '#0f3460', '#1b4332', '#4a1942', '#1d3557', '#3d405b']
 

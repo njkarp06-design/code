@@ -1,8 +1,8 @@
 import logo from './logo.svg';
-import './App.css';
-import Car from './components/Car';
-import Phone from './components/Phone';
-import Color from './components/Color';
+import './app.css';
+import Car from './components/car';
+import Phone from './components/phone';
+import Color from './components/color';
 const carinfo = {name: "Ford", model: "Mustang"};
 
 function App() {
