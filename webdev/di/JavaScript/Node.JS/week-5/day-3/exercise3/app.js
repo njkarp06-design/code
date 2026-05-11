@@ -4,10 +4,10 @@
 const { readFile, writeFile } = require("./fileManager");
 
 // reading content from Hello World.txt
-readFile("./Hello World.txt");
+readFile("./hello-world.txt");
 
-// writing new content to Bye World.txt
-writeFile("./Bye World.txt", "Writing to the file");
+// writing new content to bye-world.txt
+writeFile("./bye-world.txt", "Writing to the file");
 
-// reading Bye World.txt again to confirm the write worked
-readFile("./Bye World.txt");
+// reading bye-world.txt again to confirm the write worked
+readFile("./bye-world.txt");
