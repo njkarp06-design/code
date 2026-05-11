@@ -1,0 +1,92 @@
+.app-wrapper {
+  max-width: 620px;
+  margin: 48px auto;
+  padding: 0 20px;
+  font-family: sans-serif;
+}
+
+.app-wrapper h1 {
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  color: #666;
+  margin-top: 0;
+  margin-bottom: 32px;
+  font-size: 14px;
+}
+
+.user-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 24px;
+  background: #fafafa;
+}
+
+.user-card h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.btn-group button {
+  padding: 8px 18px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  font-size: 14px;
+  background: #3b82f6;
+  color: #fff;
+  transition: background 0.2s;
+}
+
+.btn-group button:disabled {
+  background: #93c5fd;
+  cursor: not-allowed;
+}
+
+.btn-group button.secondary {
+  background: #fff;
+  color: #333;
+}
+
+.btn-group button.secondary:hover {
+  background: #f3f4f6;
+}
+
+.error-msg {
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 14px;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.user-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.user-table td:first-child {
+  font-weight: 600;
+  color: #555;
+  width: 110px;
+}
+
+.hint {
+  color: #888;
+  font-size: 14px;
+  margin: 0;
+}
