@@ -6,15 +6,13 @@ function Phone() {
     const [color, setColor] = useState("black");
     const [year, setYear] = useState(2020);
 
-    const changeColor = () => setColor("blue");
-
     return (
         <div>
             <h1>My {brand}</h1>
             <p>Model: {model}</p>
             <p>Color: {color}</p>
             <p>Year: {year}</p>
-            <button onClick={changeColor}>Change Color</button>
+            <button onClick={() => setColor("blue")}>Change Color</button>
         </div>
     );
 }
