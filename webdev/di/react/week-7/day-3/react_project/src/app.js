@@ -1,6 +1,7 @@
 import React from 'react';
 import ErrorBoundary from './errorboundary';
 import './app.css';
+import DailyChallenge from './dailychallenge';
 
 // ─── Exercise 1 ────────────────────────────────────────────────────────────────
 
@@ -151,6 +152,8 @@ function App() {
         <FavoriteColor />
       </div>
 
+    <hr />
+      <DailyChallenge />
     </div>
   );
 }

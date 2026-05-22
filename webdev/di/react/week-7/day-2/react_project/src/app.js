@@ -3,6 +3,7 @@ import './app.css';
 import Car from './components/car';
 import Phone from './components/phone';
 import Color from './components/color';
+import DailyChallenge from './dailychallenge';
 const carinfo = {name: "Ford", model: "Mustang"};
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <DailyChallenge />
     </div>
   );
 }
