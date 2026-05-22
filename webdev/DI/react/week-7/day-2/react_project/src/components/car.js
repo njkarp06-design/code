@@ -7,7 +7,7 @@ function Car(carInfo) {
         <div>
             <h1>This car is {colour}</h1>
             <button onClick={() => setColour("blue")}>Change colour</button>
-            <h>This car is {carInfo.model}</h>
+            <h2>This car is {carInfo.model}</h2>
             <Garage size="small" />
         </div>
     );

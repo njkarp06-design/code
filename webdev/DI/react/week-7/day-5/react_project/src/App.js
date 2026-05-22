@@ -1,7 +1,6 @@
 import { ThemeProvider } from './themecontext'
 import ThemedBox from './exercise1'
 import CharacterCounter from './exercise2'
-import DailyChallenge from './dailychallenge'
 
 function App() {
     return (
@@ -12,7 +11,6 @@ function App() {
 
                 <h1 style={{ marginTop: '60px' }}>Exercise 2: Character Counter</h1>
                 <CharacterCounter />
-                <DailyChallenge />
             </div>
         </ThemeProvider>
     )

@@ -31,7 +31,7 @@ if name=="Natanel Karp":
 else:
    print("Nice to meet you, " + name + "!")
 height=float(input("Enter your height in cm: "))
-if height > 145 cm:
+if height > 145:
    print("You are tall enough to ride the roller coaster!")
 else:   print("Sorry, you need to be taller to ride the roller coaster.")  
 
