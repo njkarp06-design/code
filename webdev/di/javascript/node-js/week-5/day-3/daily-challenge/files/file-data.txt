@@ -1,3 +1,0 @@
-This is some text content inside the file.
-Node.js can read this using the fs module.
-Pretty cool stuff!
