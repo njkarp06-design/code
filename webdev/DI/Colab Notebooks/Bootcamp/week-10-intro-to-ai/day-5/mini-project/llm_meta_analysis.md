@@ -1,7 +1,7 @@
 # Meta-Analysis of Research Papers on Large Language Models (LLMs)
 
 Week 10, Day 5 Mini Project - Intro to AI Bootcamp
-Name: [Your Name] | Date: May 2026
+Name: [Natanel Karp] | Date: May 2026
 
 ---
 
