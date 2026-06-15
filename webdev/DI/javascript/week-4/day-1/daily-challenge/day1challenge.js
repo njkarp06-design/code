@@ -1,42 +1,49 @@
-const API_KEY = "hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My"
+const gameInfo = [
+    {
+        username: "john",
+        team: "red",
+        score: 5,
+        items: ["ball", "book", "pen"]
+    },
+    {
+        username: "becky",
+        team: "blue",
+        score: 10,
+        items: ["tape", "backpack", "pen"]
+    },
+    {
+        username: "susy",
+        team: "red",
+        score: 55,
+        items: ["ball", "eraser", "pen"]
+    },
+    {
+        username: "tyson",
+        team: "green",
+        score: 1,
+        items: ["book", "pen"]
+    },
+];
 
-async function fetchGif(category) {
-    try {
-        let response = await fetch(`https://api.giphy.com/v1/gifs/random?tag=${category}&rating=g&api_key=${API_KEY}`)
-        let data = await response.json()
+// 1
+const usernames = []
+gameInfo.forEach(player => {
+    usernames.push(player.username + "!")
+})
+console.log(usernames)
 
-        let gifUrl = data.data.images.original.url
-
-        let container = document.getElementById("gifContainer")
-
-        let gifDiv = document.createElement("div")
-
-        let img = document.createElement("img")
-        img.src = gifUrl
-        img.width = 300
-
-        let deleteBtn = document.createElement("button")
-        deleteBtn.textContent = "DELETE"
-        deleteBtn.addEventListener("click", function() {
-            gifDiv.remove()
-        })
-
-        gifDiv.appendChild(img)
-        gifDiv.appendChild(deleteBtn)
-        container.appendChild(gifDiv)
-
-    } catch (error) {
-        console.log("Error fetching gif:", error)
+// 2
+const winners = []
+gameInfo.forEach(player => {
+    if (player.score > 5) {
+        winners.push(player.username)
     }
-}
-
-document.getElementById("gifForm").addEventListener("submit", function(event) {
-    event.preventDefault()
-    let search = document.getElementById("searchInput").value
-    if (search === "") return
-    fetchGif(search)
 })
+console.log(winners)
 
-document.getElementById("deleteAll").addEventListener("click", function() {
-    document.getElementById("gifContainer").innerHTML = ""
+// 3
+let totalScore = 0
+gameInfo.forEach(player => {
+    totalScore += player.score
 })
+console.log("Total score:", totalScore)

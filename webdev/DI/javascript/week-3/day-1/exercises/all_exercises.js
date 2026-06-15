@@ -1,92 +1,82 @@
 // =====================================
 // START: day1normal.js
 // =====================================
-// Excersise 1 : Favorite Colors
-
-const colors = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
-const order = () => {
-    for (let i=0; i < colors.length; i++) {
-        console.log((i + 1) + '# ' + 'choice is ' + colors[i])
+const people = ["Greg", "Mary", "Devon", "James"];
+people.shift();
+console.log(people);
+people[3] = "Jason";
+console.log(people);
+people.push("Natanel");
+console.log(people);
+people.indexOf("Mary");
+console.log(people);
+people.slice(1,4);
+console.log(people);
+people.indexOf("Foo");
+// returns -1 because Foo is not an element in the array.
+last="x";
+array1= ["Greg", "Mary", "Devon", "Jason", "Natanel","x"];
+console.log(array1);
+array1.length;
+array1.indexOf("x");
+// the length of the array and the index of its last element are the same because the index starts at 0 and the length starts at 1.
+for (let person in people) {
+    console.log(people[person]);
+}
+for (let person in people) {
+    console.log(people[person]);
+    if (people[person] === "Devon") {
+        break;
     }
 }
-const checkColor = () => {
-    if (colors.includes("Violet")) {
-        console.log('Yeah, Violet is in the array');
-    } else {
-        console.log('No, Violet is not in the array');
-    }
+colors=[ ,"red", "green", "blue", "yellow", "orange"];
+for (let color in colors) {
+    console.log("my #"+colors.indexOf(colors[color])+" is "+colors[color]);
 }
-order()
-checkColor()
-
-// Excersise 2
-
-const color = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
-const ordinal = ["th", "st", "nd", "rd"];
-    const order2 = () => {
-for (let i = 0; i < color.length; i++) {
-    if (i === 0) {
-        console.log((i + 1) + ordinal[1] + ' choice is ' + color[i]);
-    } else if (i === 1) {
-        console.log((i + 1) + ordinal[2] + ' choice is ' + color[i]);
-    } else if (i === 2) {
-        console.log((i + 1) + ordinal[3] + ' choice is ' + color[i]);
-    } else {
-        console.log((i + 1) + ordinal[0] + ' choice is ' + color[i]);
-    }
+const building = {
+    numberOfFloors: 4,
+    numberOfAptByFloor: {
+        firstFloor: 3,
+        secondFloor: 4,
+        thirdFloor: 9,
+        fourthFloor: 2,
+    },
+    nameOfTenants: ["Sarah", "Dan", "David"],
+    numberOfRoomsAndRent:  {
+        sarah: [3, 990],
+        dan:  [4, 1000],
+        david: [1, 500],
+    },
 }
+console.log(building.numberOfFloors);
+console.log(building.numberOfAptByFloor.firstFloor);
+console.log(building.numberOfAptByFloor.thirdFloor);
+console.log(building.nameOfTenants[1], building.numberOfRoomsAndRent.dan[0]);
+if (building.numberOfRoomsAndRent.sarah[1] + building.numberOfRoomsAndRent.david[1] > building.numberOfRoomsAndRent.dan[1]) {
+    console.log(building.numberOfRoomsAndRent.dan[1] + 200);
 }
-order2()
-
-// Excersise 3: Analyzing Code
-
-// ------1------
-const fruits = ["apple", "orange"];
-const vegetables = ["carrot", "potato"];
-
-const result = ['bread', ...vegetables, 'chicken', ...fruits];
-console.log(result);
-// Using the spread operator is used to combine the arrays so that the result becomes ['bread', 'carrot', 'potato', 'chicken', 'apple', 'orange']
-
-// ------2------
-const country = "USA";
-console.log([...country]);
-// Using the spread operator used to split the string into an array of characters so that the result comes out to be, ['U', 'S', 'A']
-
-// ------Bonus------
-let newArray = [...[,,]];
-console.log(newArray);
-// Using the spread operator used to create a new array with three empty parts so that the result comes out to be, [undefined, undefined, undefined]
-
-// Excersise 4: Employees
-
-const users = [{ firstName: 'Bradley', lastName: 'Bouley', role: 'Full Stack Resident' },
-             { firstName: 'Chloe', lastName: 'Alnaji', role: 'Full Stack Resident' },
-             { firstName: 'Jonathan', lastName: 'Baughn', role: 'Enterprise Instructor' },
-             { firstName: 'Michael', lastName: 'Herman', role: 'Lead Instructor' },
-             { firstName: 'Robert', lastName: 'Hajek', role: 'Full Stack Resident' },
-             { firstName: 'Wes', lastName: 'Reid', role: 'Instructor'},
-             { firstName: 'Zach', lastName: 'Klabunde', role: 'Instructor'}];
-const welcomeStudents = users.map (user =>
-`Hello ${user.firstName}`
-)
-console.log(welcomeStudents)
-
-// Excersise 5: Star Wars
-
-const epic = ['a', 'long', 'time', 'ago', 'in a', 'galaxy', 'far far', 'away'];
-const epicPhrase = epic.reduce((accumulator, currentValue) => accumulator + ' ' + currentValue);
-console.log(epicPhrase)
-const students = [{name: "Ray", course: "Computer Science", isPassed: true},
-               {name: "Liam", course: "Computer Science", isPassed: false},
-               {name: "Jenner", course: "Information Technology", isPassed: true},
-               {name: "Marco", course: "Robotics", isPassed: true},
-               {name: "Kimberly", course: "Artificial Intelligence", isPassed: false},
-               {name: "Jamie", course: "Big Data", isPassed: false}];
-const passedStudents = students.filter(student => student.isPassed === true);
-console.log(passedStudents)
-const congratulations = passedStudents.forEach(student => console.log(`Good job ${student.name}, you passed the course in ${student.course}`))
-console.log(congratulations)
+let family = {
+    dad : "philip",
+    mum : "Juliet",
+    brother : "matti"
+}
+for (let membertype in family) {
+    console.log(membertype);
+}
+for (let membertype in family) {
+    console.log(family[membertype]);
+}
+const details = {
+  my: 'name',
+  is: 'Rudolf',
+  the: 'reindeer'
+}
+for (let key in details) {
+    console.log(key + " " + details[key]);
+}
+const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
+const societyname=names.map(name => name[0]).sort().join("");
+console.log(societyname);
 // =====================================
 // END: day1normal.js
 // =====================================
@@ -95,22 +85,76 @@ console.log(congratulations)
 // =====================================
 // START: day1gold.js
 // =====================================
-// Excersise 1
-[1, 2, 3].map(num => {
-  if (typeof num === 'number') return num * 2;
-  return ;
-});
-//  The result of the code will be [2, 4, 6] as the map method is used to create a new array with the results of calling a provided function on every element in the calling array. In this case, the function checks if the type of num is a number and if it is, it returns num multiplied by 2. If it is not a number, it returns undefined, which is not included in the resulting array.
+let numbers = [123, 8409, 100053, 333333333, 7]
+for (let number in numbers) {
+    if (numbers[number] % 3 === 0) {console.log(true)}
+    else {console.log(false)}
+}
 
-// Excersise 2
-
-[[0, 1], [2, 3]].reduce(
-  (acc, cur) => {
-    return acc.concat(cur);
-  },
-  [1, 2],
-);
-// The result of the code will be [1, 2, 0, 1, 2, 3] as the reduce method is used to execute a reducer function on each element of the array, resulting in a single output value. In this case, the reducer function takes an accumulator (acc) and the current value (cur) and concatenates them together using the concat method. The initial value of the accumulator is set to [1, 2], so when the reduce method is called on the array [[0, 1], [2, 3]], it will concatenate [1, 2] with [0, 1] and then concatenate that result with [2, 3], resulting in [1, 2, 0, 1, 2, 3].
+let age = [20,5,12,43,98,55];
+let sum = 0;
+for (let i = 0; i < age.length; i++) {
+  sum += age[i];
+}
+console.log("Sum:", sum);
+let max = age[0]; // start with first element
+for (let i = 1; i < age.length; i++) {
+  if (age[i] > max) {
+    max = age[i];
+  }
+}
+console.log("Highest age:", max);
 // =====================================
 // END: day1gold.js
+// =====================================
+
+
+// =====================================
+// START: day1ninja.js
+// =====================================
+// Excersise 1
+let Leo = {
+    FullName : "Leonardo",
+    Mass : 72,
+    Height : 1.70,
+    LBMI : function () {
+      return this.Mass / (this.Height**2);
+     }
+  }
+let y = console.log("Leo's BMI is:" + Leo.LBMI())
+y
+let Nush = {
+  FullName : "Natanel",
+  Mass : 65,
+  Height : 1.75,
+  NBMI : function() {
+  return this.Mass / (this.Height**2);
+}
+}
+let x = console.log("Natanel's BMI is:" + Nush.NBMI())
+x
+function compare() {
+  if (x > y) {
+  console.log("Natanel is a fatty");
+  }
+  else {console.log("Natanel is pretty fit at the moment! (well compared to Leo)")};
+}
+compare()
+// Excersise 2
+let gradesList = [75, 78, 90, 42, 35, 97, 67, 50, 10]
+const findAvg = (gradesList) => {
+let avg = 0;
+for (let i = 0; i < gradesList.length; i++) {
+avg += gradesList[i] / (gradesList.length)};
+console.log("This is your average grade:" + avg)
+if (avg>65) {
+  console.log("YOU PASSED!");
+}
+  else {
+    console.log("YOU FAILED! Please repeat the course")
+}
+}
+findAvg(gradesList)
+// =====================================
+// END: day1ninja.js
 // =====================================

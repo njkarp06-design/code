@@ -1,21 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Day 3 Challenge</title>
-</head>
-<body>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Challenge: Mad Libs</title>
+ </head>
+ <body>
 
-    <form id="myForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name"><br><br>
-        <label for="lastname">Last Name:</label>
-        <input type="text" id="lastname"><br><br>
-        <button type="submit">Send</button>
+    <h1>Mad Libs</h1>
+
+    <form id="libform">
+        <label for="noun">Noun:</label><input type="text" id="noun"><br>
+        <label for="adjective">Adjective:</label><input type="text" id="adjective"><br>
+        <label for="person">Someone's Name:</label><input type="text" id="person"><br>
+        <label for="verb">Verb:</label><input type="text" id="verb"><br>
+        <label for="place">A place:</label><input type="text" id="place"><br>
+        <button id="lib-button">Lib it!</button>
     </form>
 
-    <div id="output"></div>
+    <p>Generated story:
+    <span id="story"></span>
+    </p>
+
+    <button id="shuffle-btn" style="display:none">Shuffle Story</button>
 
     <script src="day3challenge.js"></script>
-</body>
+
+ </body>
 </html>

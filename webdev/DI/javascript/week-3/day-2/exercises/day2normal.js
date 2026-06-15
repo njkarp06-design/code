@@ -1,60 +1,52 @@
-// Excersise 1
-const person = {
-    name: 'John Doe',
-    age: 25,
-    location: {
-        country: 'Canada',
-        city: 'Vancouver',
-        coordinates: [49.2827, -123.1207]
+// Exercise 1
+const displayNumberDivisible = () => {
+    for (let i = 0; i <= 500; i++) if (i % 23 === 0) console.log(i); let sum =0; for (let i = 0; i <= 500; i++) if (i % 23 ===0) sum += i; console.log(`The sum of the numbers that are divisible by 23 is: ${sum}`);
+}   
+displayNumberDivisible();
+// Exercise 2
+const stock = { 
+    "banana": 6, 
+    "apple": 0,
+    "pear": 12,
+    "orange": 32,
+    "blueberry":1
+}  
+const prices = {    
+    "banana": 4, 
+    "apple": 2, 
+    "pear": 1,
+    "orange": 1.5,
+    "blueberry":10
+} 
+shoppingList = ["banana", "orange", "apple"];
+
+const myBill = () => {
+    let total = 0;
+    for (let i = 0; i < shoppingList.length; i++) {
+        if (stock[shoppingList[i]] > 0) {
+            total += prices[shoppingList[i]];
+            stock[shoppingList[i]] -= 1;
+        }
     }
+    console.log(total);
 }
-
-const {name, location: {country, city, coordinates: [lat, lng]}} = person;
-
-console.log(`I am ${name} from ${city}, ${country}. Latitude(${lat}), Longitude(${lng})`);
-// Output: I am John Doe from Vancouver, Canada. Latitude(49.2827), Longitude(-123.1207)
-
-// Excersise 2
-function displayStudentInfo(objUser) {
-    const {first, last} = objUser;
-    console.log(`Your full name is ${first} ${last}`);
-}
-displayStudentInfo({first: 'Elie', last:'Schoppik'});
-// Output: Your full name is Elie Schoppik
-
-// Excersise 3
-const users = { user1: 18273, user2: 92833, user3: 90315 };
-const entries = Object.entries(users);
-console.log(entries);
-// Output: [ [ 'user1', 18273 ], [ 'user2', 92833 ], [ 'user3', 90315 ] ]
-
-// Excersise 4
-class Person {
-  constructor(name) {
-    this.name = name;
-  }
-}
-
-const member = new Person('John');
-console.log(typeof member);
-// Output: object
-
-// Excersise 5
-class Dog {
-  constructor(name) {
-    this.name = name;
-  }
-}
-class Labrador extends Dog {
-  constructor(name, size) {
-    super(name);
-    this.size = size;
-  }
-};
-const labrador = new Labrador('Buddy', 'Large');
-console.log(labrador);
-// Output: Labrador { name: 'Buddy', size: 'Large' }
-
-
-
+myBill();
+// Exercise 3
+const changeEnough = (itemPrice, amountOfChange) => {
+  const coinvalues = [0.25, 0.1, 0.05, 0.01];
+   let totalchange = 0;
+    for (let i = 0; i < amountOfChange.length; i++) {totalchange += amountOfChange[i] * coinvalues[i];}
+    if (totalchange >= itemPrice) {
+        console.log(true);}
+        if (totalchange < itemPrice) {
+            console.log(false);
+        }
+    }
+    changeEnough(4.25, [25,20,5,0])
+    changeEnough(14.11, [2,100,0,0])
+    //Excersise 4
+    const hotelcost = (numNights, nightCost) => {
+     console.log(numNights * nightCost);
+     }
+     hotelcost(13, 140)
 

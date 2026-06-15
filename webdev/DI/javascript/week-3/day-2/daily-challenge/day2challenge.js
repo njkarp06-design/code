@@ -1,30 +1,28 @@
-class Video {
-    constructor(title, uploader, time) {
-        this.title = title
-        this.uploader = uploader
-        this.time = time
-    }
-
-    watch() {
-        console.log(`${this.uploader} watched all ${this.time} of ${this.title}!`)
-    }
-}
-
-const video1 = new Video("funny cats", "john", 120)
-video1.watch()
-
-const video2 = new Video("cooking pasta", "sarah", 600)
-video2.watch()
-
-const videoData = [
-    { title: "learn javascript", uploader: "mike", time: 3600 },
-    { title: "guitar tutorial", uploader: "amy", time: 900 },
-    { title: "morning workout", uploader: "tyson", time: 1800 },
-    { title: "travel vlog", uploader: "becky", time: 720 },
-    { title: "book review", uploader: "susy", time: 480 }
+const planets = [
+    { name: "Mercury", color: "mercury", moons: 0 },
+    { name: "Venus", color: "venus", moons: 0 },
+    { name: "Earth", color: "earth", moons: 1 },
+    { name: "Mars", color: "mars", moons: 2 },
+    { name: "Jupiter", color: "jupiter", moons: 95 },
+    { name: "Saturn", color: "saturn", moons: 83 },
+    { name: "Uranus", color: "uranus", moons: 27 },
+    { name: "Neptune", color: "neptune", moons: 16 }
 ]
 
-for (let i = 0; i < videoData.length; i++) {
-    let v = new Video(videoData[i].title, videoData[i].uploader, videoData[i].time)
-    v.watch()
+const section = document.querySelector(".listPlanets")
+
+for (let i = 0; i < planets.length; i++) {
+    const planetDiv = document.createElement("div")
+    planetDiv.classList.add("planet", planets[i].color)
+    planetDiv.textContent = planets[i].name
+
+    for (let j = 0; j < planets[i].moons; j++) {
+        const moonDiv = document.createElement("div")
+        moonDiv.classList.add("moon")
+        moonDiv.style.left = (j * 35) + "px"
+        moonDiv.style.top = "110px"
+        planetDiv.appendChild(moonDiv)
+    }
+
+    section.appendChild(planetDiv)
 }
