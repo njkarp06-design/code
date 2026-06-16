@@ -3,28 +3,28 @@ import random
 # Exercise 1
 
 # 1. What is a class?
-# A class is a blueprint for creating objects. It defines the attributes and methods that the objects made from it will have.
+# a class is basically a template or blueprint for creating objects. it holds the attributes and methods that those objects will have.
 
 # 2. What is an instance?
-# An instance is an object created from a class. Each instance has its own copy of the class attributes.
+# an instance is an actual object made from a class. so if Dog is the class, my_dog = Dog() is the instance.
 
 # 3. What is encapsulation?
-# Encapsulation is bundling data and the methods that work on that data together inside a class, and keeping the internal details hidden from outside.
+# encapsulation is keeping the data and the methods that use it bundled together inside a class, and hiding the internal stuff from outside.
 
 # 4. What is abstraction?
-# Abstraction is hiding the complex implementation details and only exposing what's necessary for the user to interact with.
+# hiding how something works internally and just showing what it does. like you dont need to know how a car engine works to drive it.
 
 # 5. What is inheritance?
-# Inheritance is when a class (child) takes on the attributes and methods of another class (parent).
+# when a child class gets the attributes and methods of a parent class so it doesnt have to rewrite everything from scratch.
 
 # 6. What is multiple inheritance?
-# Multiple inheritance is when a class inherits from more than one parent class at the same time.
+# when a class inherits from more than one parent class.
 
 # 7. What is polymorphism?
-# Polymorphism is when different classes can be used with the same interface, each responding to the same method call in their own way.
+# when different objects can use the same method name but behave differently depending on the class. like a .speak() method working differently on a Dog vs a Cat.
 
 # 8. What is method resolution order (MRO)?
-# MRO is the order Python uses to look up methods and attributes in a class hierarchy. It follows the C3 linearization algorithm, and you can check it with ClassName.__mro__
+# MRO is the order python uses to search for a method when there is inheritance involved. you can check it with ClassName.__mro__
 
 
 # Exercise 2
