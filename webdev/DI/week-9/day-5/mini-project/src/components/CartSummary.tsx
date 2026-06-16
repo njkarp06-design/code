@@ -1,34 +1,41 @@
-import { useSelector } from 'react-redux'
-import { selectCartCount, selectCartTotal, selectCartItems } from '../store/selectors'
+import { useDispatch, useSelector } from 'react-redux'
+import type { AppDispatch } from '../store/store'
+import { removeFromCart } from '../store/productsSlice'
+import { selectCartItems, selectCartCount, selectCartTotal } from '../store/selectors'
 
 function CartSummary() {
-  const count = useSelector(selectCartCount)
-  const total = useSelector(selectCartTotal)
-  const items = useSelector(selectCartItems)
-
-  if (count === 0) {
-    return (
-      <aside className="cart-summary empty">
-        <h2>Cart</h2>
-        <p>No items yet.</p>
-      </aside>
-    )
-  }
+  const dispatch = useDispatch<AppDispatch>()
+  const cartItems = useSelector(selectCartItems)
+  const cartCount = useSelector(selectCartCount)
+  const cartTotal = useSelector(selectCartTotal)
 
   return (
     <aside className="cart-summary">
-      <h2>Cart ({count})</h2>
-      <ul className="cart-list">
-        {items.map((item) => (
-          <li key={item.id} className="cart-item">
-            <span>{item.name}</span>
-            <span>${item.price.toFixed(2)}</span>
-          </li>
-        ))}
-      </ul>
-      <div className="cart-total">
-        Total: <strong>${total.toFixed(2)}</strong>
-      </div>
+      <h2>Cart ({cartCount})</h2>
+
+      {cartItems.length === 0 ? (
+        <p className="cart-empty">No items in cart.</p>
+      ) : (
+        <>
+          <ul className="cart-list">
+            {cartItems.map((item) => (
+              <li key={item.id} className="cart-item">
+                <span className="cart-item-name">{item.name}</span>
+                <span className="cart-item-price">${item.price.toFixed(2)}</span>
+                <button
+                  className="cart-remove-btn"
+                  onClick={() => dispatch(removeFromCart(item.id))}
+                >
+                  Remove
+                </button>
+              </li>
+            ))}
+          </ul>
+          <div className="cart-total">
+            <strong>Total: ${cartTotal.toFixed(2)}</strong>
+          </div>
+        </>
+      )}
     </aside>
   )
 }
