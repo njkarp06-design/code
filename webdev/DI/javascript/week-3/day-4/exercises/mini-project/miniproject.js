@@ -10,12 +10,10 @@ let isDrawing = false;
 let rainbowMode = false;
 let eraserMode = false;
 
-// Generate random rainbow color
 function randomColor() {
   return `hsl(${Math.random() * 360}, 100%, 50%)`;
 }
 
-// Create grid
 function createGrid(size) {
   grid.innerHTML = "";
   grid.style.gridTemplateColumns = `repeat(${size}, 20px)`;
@@ -38,7 +36,6 @@ function createGrid(size) {
   }
 }
 
-// Paint logic
 function paint(square) {
   if (eraserMode) {
     square.style.backgroundColor = "white";
@@ -49,12 +46,10 @@ function paint(square) {
   }
 }
 
-// Stop drawing when mouse is released
 document.addEventListener("mouseup", () => {
   isDrawing = false;
 });
 
-// Toggle rainbow mode
 rainbowBtn.addEventListener("click", () => {
   rainbowMode = !rainbowMode;
   eraserMode = false;
@@ -63,7 +58,6 @@ rainbowBtn.addEventListener("click", () => {
   eraserBtn.style.background = "";
 });
 
-// Toggle eraser mode
 eraserBtn.addEventListener("click", () => {
   eraserMode = !eraserMode;
   rainbowMode = false;
@@ -72,19 +66,16 @@ eraserBtn.addEventListener("click", () => {
   rainbowBtn.style.background = "";
 });
 
-// Clear board
 clearBtn.addEventListener("click", () => {
   document.querySelectorAll(".square").forEach(sq => {
     sq.style.backgroundColor = "white";
   });
 });
 
-// Grid size slider
 gridSizeSlider.addEventListener("input", () => {
   const size = gridSizeSlider.value;
   gridValue.textContent = `${size} × ${size}`;
   createGrid(size);
 });
 
-// Initial grid
 createGrid(30);

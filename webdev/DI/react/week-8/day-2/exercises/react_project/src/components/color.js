@@ -5,7 +5,7 @@ function Color() {
 
     useEffect(() => {
         alert("useEffect reached");
-    });
+    }, []);
 
     return (
         <div>

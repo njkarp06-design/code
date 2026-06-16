@@ -1,6 +1,4 @@
-// =====================================
-// START: src/quotes.js
-// =====================================
+// src/quotes.js
 const quotes = [
     { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
     { text: "In the middle of every difficulty lies opportunity.", author: "Albert Einstein" },
@@ -25,14 +23,9 @@ const quotes = [
 ]
 
 export default quotes
-// =====================================
-// END: src/quotes.js
-// =====================================
 
 
-// =====================================
-// START: src/App.js
-// =====================================
+// src/App.js
 import { useState } from 'react'
 import quotes from './quotes'
 
@@ -103,14 +96,9 @@ function App() {
 }
 
 export default App
-// =====================================
-// END: src/App.js
-// =====================================
 
 
-// =====================================
-// START: src/index.js
-// =====================================
+// src/index.js
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
@@ -121,6 +109,3 @@ root.render(
     <App />
   </React.StrictMode>
 )
-// =====================================
-// END: src/index.js
-// =====================================

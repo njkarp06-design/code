@@ -5,7 +5,7 @@ function greet(greeting: string): string {
 console.log(greet("Hello, World!"));
 
 // Excersise 2
-let age: number = 19;``
+let age: number = 19;
 let firstName: string = "Natanel Karp";
 console.log(`My name is ${firstName} and I am ${age} years old.`);
 

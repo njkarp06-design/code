@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Garage from './garage';
 
-function Car(carInfo) {
+function Car({ carInfo }) {
     const [colour, setColour] = useState("red");
     return (
         <div>

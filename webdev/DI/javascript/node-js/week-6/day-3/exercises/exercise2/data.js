@@ -1,5 +1,4 @@
 // Exercise 2 - data.js
-// array of people using ES6 export
 
 const people = [
     { name: "Alice", age: 24, location: "New York" },
@@ -9,4 +8,4 @@ const people = [
     { name: "Ethan", age: 35, location: "Sydney" },
 ];
 
-export default people;
+module.exports = people;

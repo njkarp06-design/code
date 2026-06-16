@@ -1,6 +1,4 @@
-// =====================================
-// START: blog-api/server.js
-// =====================================
+// blog-api/server.js
 const express = require("express")
 const app = express()
 
@@ -67,14 +65,9 @@ app.use((err, req, res, next) => {
 app.listen(3000, () => {
     console.log("Server running on port 3000")
 })
-// =====================================
-// END: blog-api/server.js
-// =====================================
 
 
-// =====================================
-// START: book-api/app.js
-// =====================================
+// book-api/app.js
 const express = require("express")
 const app = express()
 
@@ -115,14 +108,9 @@ app.post("/api/books", (req, res) => {
 app.listen(5000, () => {
     console.log("Server running on port 5000")
 })
-// =====================================
-// END: book-api/app.js
-// =====================================
 
 
-// =====================================
-// START: crud-api/data/dataService.js
-// =====================================
+// crud-api/data/dataService.js
 const axios = require("axios")
 
 async function fetchPosts() {
@@ -131,14 +119,9 @@ async function fetchPosts() {
 }
 
 module.exports = fetchPosts
-// =====================================
-// END: crud-api/data/dataService.js
-// =====================================
 
 
-// =====================================
-// START: crud-api/app.js
-// =====================================
+// crud-api/app.js
 const express = require("express")
 const fetchPosts = require("./data/dataService")
 
@@ -157,6 +140,3 @@ app.get("/posts", async (req, res) => {
 app.listen(5000, () => {
     console.log("Server running on port 5000")
 })
-// =====================================
-// END: crud-api/app.js
-// =====================================

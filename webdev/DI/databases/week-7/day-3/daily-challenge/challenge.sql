@@ -1,8 +1,6 @@
 -- Daily Challenge: Table Relationships and JOINs
 
--- =====================
--- PART I
--- =====================
+-- Part I
 
 CREATE TABLE Customer (
     id SERIAL PRIMARY KEY,
@@ -49,9 +47,7 @@ LEFT JOIN CustomerProfile cp ON c.id = cp.customer_id
 WHERE cp.isLoggedIn = false OR cp.isLoggedIn IS NULL;
 
 
--- =====================
--- PART II
--- =====================
+-- Part II
 
 CREATE TABLE Book (
     book_id SERIAL PRIMARY KEY,

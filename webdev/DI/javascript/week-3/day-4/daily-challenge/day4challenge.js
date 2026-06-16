@@ -1,4 +1,5 @@
 const tasks = []
+let nextId = 0
 
 function addTask() {
     let inputVal = document.getElementById("taskInput").value
@@ -9,7 +10,7 @@ function addTask() {
     }
 
     let taskObj = {
-        task_id: tasks.length,
+        task_id: nextId++,
         text: inputVal,
         done: false
     }

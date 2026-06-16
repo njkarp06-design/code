@@ -8,7 +8,7 @@
      background-size: cover;
      background-position: center;
      background-attachment: fixed;
-     color: black solid bold;
+     color: black;
      font-weight: bold;
      font-style: italic;
      font-family: Georgia, 'Times New Roman', Times, serif;
@@ -53,11 +53,11 @@ nav ul li a {
     background-color: lightgrey;
     margin: 0px;
 }
-p1 {
+.p1 {
     font-size: 18px;
     line-height: 1.6;
     color: black;
 }
-container-2 {
+.container-2 {
     background-color: lightgrey;
 }

@@ -2,8 +2,6 @@ import { useSelector } from 'react-redux'
 import { selectCartCount, selectCartTotal, selectCartItems } from '../store/selectors'
 
 function CartSummary() {
-  // Each of these uses its own memoized selector so the component only
-  // re-renders when the cart data it actually cares about changes.
   const count = useSelector(selectCartCount)
   const total = useSelector(selectCartTotal)
   const items = useSelector(selectCartItems)

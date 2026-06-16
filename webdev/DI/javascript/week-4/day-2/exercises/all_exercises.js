@@ -1,6 +1,4 @@
-// =====================================
-// START: day2normal.js
-// =====================================
+// day2normal.js
 // Excersise 1
 const person = {
     name: 'John Doe',
@@ -57,14 +55,9 @@ class Labrador extends Dog {
 const labrador = new Labrador('Buddy', 'Large');
 console.log(labrador);
 // Output: Labrador { name: 'Buddy', size: 'Large' }
-// =====================================
-// END: day2normal.js
-// =====================================
 
 
-// =====================================
-// START: day2gold.js
-// =====================================
+// day2gold.js
 // Excersise 1
 const printFUllName = ({first, last}) => {
     console.log(`${first} ${last}`);
@@ -79,7 +72,7 @@ let details = {
     born: 2006
 }
 const printDetails = () => {
-    console.log(Object.keys(details).sort((a, b) => a - b));
+    console.log(Object.keys(details).sort());
     console.log(Object.values(details).sort((a, b) => a - b));
 }
 printDetails();
@@ -104,6 +97,3 @@ const counterTwo = counterOne;
 counterTwo.increment();
 console.log(counterOne.count);
 // Output: 3
-// =====================================
-// END: day2gold.js
-// =====================================

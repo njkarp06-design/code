@@ -16,12 +16,12 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        <div>
           <p>"Hello World!"</p>
           {myelement}
           {multipleElement}
           <h3>{user.firstName} {user.lastName}</h3>
-       </p>
+       </div>
         <UserFavoriteAnimals favAnimals={user.favAnimals} />
         <Exercise />
         <a

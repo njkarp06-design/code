@@ -1,6 +1,4 @@
-// =====================================
-// START: day1normal.js
-// =====================================
+// day1normal.js
 const people = ["Greg", "Mary", "Devon", "James"];
 people.shift();
 console.log(people);
@@ -77,14 +75,9 @@ for (let key in details) {
 const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
 const societyname=names.map(name => name[0]).sort().join("");
 console.log(societyname);
-// =====================================
-// END: day1normal.js
-// =====================================
 
 
-// =====================================
-// START: day1gold.js
-// =====================================
+// day1gold.js
 let numbers = [123, 8409, 100053, 333333333, 7]
 for (let number in numbers) {
     if (numbers[number] % 3 === 0) {console.log(true)}
@@ -104,14 +97,9 @@ for (let i = 1; i < age.length; i++) {
   }
 }
 console.log("Highest age:", max);
-// =====================================
-// END: day1gold.js
-// =====================================
 
 
-// =====================================
-// START: day1ninja.js
-// =====================================
+// day1ninja.js
 // Excersise 1
 let Leo = {
     FullName : "Leonardo",
@@ -121,8 +109,8 @@ let Leo = {
       return this.Mass / (this.Height**2);
      }
   }
-let y = console.log("Leo's BMI is:" + Leo.LBMI())
-y
+let y = Leo.LBMI()
+console.log("Leo's BMI is:" + y)
 let Nush = {
   FullName : "Natanel",
   Mass : 65,
@@ -131,8 +119,8 @@ let Nush = {
   return this.Mass / (this.Height**2);
 }
 }
-let x = console.log("Natanel's BMI is:" + Nush.NBMI())
-x
+let x = Nush.NBMI()
+console.log("Natanel's BMI is:" + x)
 function compare() {
   if (x > y) {
   console.log("Natanel is a fatty");
@@ -155,6 +143,3 @@ if (avg>65) {
 }
 }
 findAvg(gradesList)
-// =====================================
-// END: day1ninja.js
-// =====================================

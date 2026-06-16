@@ -26,6 +26,7 @@ router.get("/", (req, res) => {
 })
 
 router.post("/", (req, res) => {
+    if (!req.body || !req.body.answer) return res.status(400).json({ error: "answer required" })
     let userAnswer = req.body.answer.toLowerCase().trim()
     let correctAnswer = triviaQuestions[currentQuestion].answer
     let isCorrect = userAnswer === correctAnswer.toLowerCase()

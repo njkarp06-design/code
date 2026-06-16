@@ -66,7 +66,7 @@ function App() {
                 onClick={calculate}
                 style={{ width: '100%', padding: '12px', fontSize: '16px', background: '#3498db', color: '#fff', border: 'none', borderRadius: '6px', cursor: 'pointer' }}
             >
-                Add Them
+                Calculate
             </button>
 
             {result !== null && (

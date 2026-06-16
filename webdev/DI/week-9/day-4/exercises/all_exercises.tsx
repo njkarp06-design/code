@@ -1,6 +1,4 @@
-// =====================================
-// START: src/store/userSlice.ts
-// =====================================
+// src/store/userSlice.ts
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
 interface Address {
@@ -81,18 +79,12 @@ const userSlice = createSlice({
 
 export const { clearUser } = userSlice.actions
 export default userSlice.reducer
-// =====================================
-// END: src/store/userSlice.ts
-// =====================================
 
 
-// =====================================
-// START: src/store/store.ts
-// =====================================
+// src/store/store.ts
 import { configureStore } from '@reduxjs/toolkit'
 import userReducer from './userSlice'
 
-// redux-thunk is included by default in configureStore
 export const store = configureStore({
   reducer: {
     user: userReducer,
@@ -101,14 +93,9 @@ export const store = configureStore({
 
 export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch
-// =====================================
-// END: src/store/store.ts
-// =====================================
 
 
-// =====================================
-// START: src/components/UserData.tsx
-// =====================================
+// src/components/UserData.tsx
 import { useSelector, useDispatch } from 'react-redux'
 import type { RootState, AppDispatch } from '../store/store'
 import { fetchUser, clearUser } from '../store/userSlice'
@@ -185,14 +172,9 @@ function UserData() {
 }
 
 export default UserData
-// =====================================
-// END: src/components/UserData.tsx
-// =====================================
 
 
-// =====================================
-// START: src/app.tsx
-// =====================================
+// src/app.tsx
 import './app.css'
 import UserData from './components/UserData'
 
@@ -207,14 +189,9 @@ function App() {
 }
 
 export default App
-// =====================================
-// END: src/app.tsx
-// =====================================
 
 
-// =====================================
-// START: src/main.tsx
-// =====================================
+// src/main.tsx
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { Provider } from 'react-redux'
@@ -229,6 +206,3 @@ createRoot(document.getElementById('root')!).render(
     </Provider>
   </StrictMode>,
 )
-// =====================================
-// END: src/main.tsx
-// =====================================

@@ -3,8 +3,6 @@ import ErrorBoundary from './errorboundary';
 import './app.css';
 import DailyChallenge from './dailychallenge';
 
-// ─── Exercise 1 ────────────────────────────────────────────────────────────────
-
 class BuggyCounter extends React.Component {
   constructor(props) {
     super(props);
@@ -32,8 +30,6 @@ class BuggyCounter extends React.Component {
   }
 }
 
-// ─── Exercise 3 – Child ────────────────────────────────────────────────────────
-
 class Child extends React.Component {
   componentWillUnmount() {
     alert('The component named Child is unmounted.');
@@ -43,8 +39,6 @@ class Child extends React.Component {
     return <h1>Hello World!</h1>;
   }
 }
-
-// ─── Exercise 2 + 3 – FavoriteColor ───────────────────────────────────────────
 
 class FavoriteColor extends React.Component {
   constructor(props) {
@@ -97,13 +91,10 @@ class FavoriteColor extends React.Component {
   }
 }
 
-// ─── App ───────────────────────────────────────────────────────────────────────
-
 function App() {
   return (
     <div style={{ fontFamily: 'sans-serif', maxWidth: '700px', margin: '30px auto', padding: '0 20px' }}>
 
-      {/* ── Exercise 1 ── */}
       <h1>Exercise 1: Error Boundary Simulation</h1>
       <p style={{ color: '#555' }}>Click on a counter to increment it. When it reaches 5 it crashes.</p>
 
@@ -142,7 +133,6 @@ function App() {
 
       <hr />
 
-      {/* ── Exercise 2 + 3 ── */}
       <h1>Exercise 2 &amp; 3: Lifecycle</h1>
       <p style={{ fontSize: '0.9em', color: '#666' }}>
         On mount the color is <strong>red</strong>. After 1 second a timer updates it to <strong>yellow</strong>.

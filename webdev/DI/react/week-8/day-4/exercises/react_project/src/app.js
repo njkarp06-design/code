@@ -40,7 +40,7 @@ function PageContent() {
       }}
     >
       <div style={{ maxWidth: '700px', margin: '0 auto', padding: '30px 20px' }}>
-        <h1>Week 7 - Day 4 Mini Project</h1>
+        <h1>Week 8 - Day 4 Mini Project</h1>
 
         {/* Exercise 1 */}
         <h2>Exercise 1: Theme Switcher</h2>

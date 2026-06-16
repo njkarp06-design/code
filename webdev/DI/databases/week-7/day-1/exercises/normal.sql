@@ -1,7 +1,5 @@
 -- Exercise 1: Items and Customers
 
-CREATE DATABASE public;
-
 CREATE TABLE items (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100),

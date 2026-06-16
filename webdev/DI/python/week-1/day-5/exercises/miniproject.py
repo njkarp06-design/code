@@ -7,7 +7,7 @@ GREEN = "\033[92m"
 RESET = "\033[0m"
 
 
-# DISPLAY BOARD
+# display board
 
 def display_board(board):
     print("\n")
@@ -29,7 +29,7 @@ def display_board(board):
     print("\n")
 
 
-# NUMBERED INPUT SYSTEM
+# numbered input
 
 def get_position_input(player, board):
     while True:
@@ -54,7 +54,7 @@ def get_position_input(player, board):
 
 
 
-# CHECK WIN
+# check win
 
 def check_win(board, player):
     # Rows
@@ -78,7 +78,7 @@ def check_win(board, player):
 
 
 
-# CHECK TIE
+# check tie
 
 def check_tie(board):
     for row in board:
@@ -88,7 +88,7 @@ def check_tie(board):
 
 
 
-# AI EASY (random)
+# ai easy - random
 
 def ai_easy(board):
     empty = [(r, c) for r in range(3) for c in range(3) if board[r][c] == " "]
@@ -96,7 +96,7 @@ def ai_easy(board):
 
 
 
-# AI MEDIUM (block or win)
+# ai medium - block or win
 
 def ai_medium(board, ai, human):
     # Try to win
@@ -124,7 +124,7 @@ def ai_medium(board, ai, human):
 
 
 
-# AI HARD (Minimax - unbeatable)
+# ai hard - minimax
 
 def minimax(board, depth, is_maximizing, ai, human):
     if check_win(board, ai):
@@ -174,7 +174,7 @@ def ai_hard(board, ai, human):
     return best_move
 
 
-# MAIN GAME LOOP
+# main game loop
 
 def play():
     print("Welcome to Tic Tac Toe!")

@@ -1,6 +1,4 @@
-// =====================================
-// START: day5normal.js
-// =====================================
+// day5normal.js
 function compareTOTen(num) {
     return new Promise((resolve, reject) => {
         try {
@@ -57,14 +55,9 @@ Promise.resolve(3)
 Promise.reject("Boo!")
     .then(value => console.log(value))
     .catch(error => console.error(error));
-// =====================================
-// END: day5normal.js
-// =====================================
 
 
-// =====================================
-// START: day5gold.js
-// =====================================
+// day5gold.js
 // Excersise 1
 const promise1 = Promise.resolve(3);
 const promise2 = 42;
@@ -91,6 +84,3 @@ Promise.all(promiseArr)
     console.log(result);
   });
   // A function is created that multiplies all its inputs by 2 where its inputs are under the variable x. This function is called timeTwoAsync. Then a new array is created and this array is transformed by the map method to have the function of timesTwoAsync applied to it. This means that the array named arr with values of 1,2,3, are stored under the variable x each and multiplied by 2. The map method creates a new array with the function applied to the array arr which is named promiseArr and this new array is printed as [2,4,6].
-// =====================================
-// END: day5gold.js
-// =====================================

@@ -1,6 +1,4 @@
-// =====================================
-// START: src/store/todoslice.ts
-// =====================================
+// src/store/todoslice.ts
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 interface Todo {
@@ -46,14 +44,9 @@ const todoSlice = createSlice({
 
 export const { addTodo, toggleTodo, removeTodo } = todoSlice.actions
 export default todoSlice.reducer
-// =====================================
-// END: src/store/todoslice.ts
-// =====================================
 
 
-// =====================================
-// START: src/store/store.ts
-// =====================================
+// src/store/store.ts
 import { configureStore } from '@reduxjs/toolkit'
 import todoReducer from './todoslice'
 
@@ -65,14 +58,9 @@ export const store = configureStore({
 
 export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch
-// =====================================
-// END: src/store/store.ts
-// =====================================
 
 
-// =====================================
-// START: src/components/addtodo.tsx
-// =====================================
+// src/components/addtodo.tsx
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addTodo } from '../store/todoslice'
@@ -104,14 +92,9 @@ function AddTodo() {
 }
 
 export default AddTodo
-// =====================================
-// END: src/components/addtodo.tsx
-// =====================================
 
 
-// =====================================
-// START: src/components/todoitem.tsx
-// =====================================
+// src/components/todoitem.tsx
 import { useDispatch } from 'react-redux'
 import { toggleTodo, removeTodo } from '../store/todoslice'
 import { AppDispatch } from '../store/store'
@@ -141,14 +124,9 @@ function TodoItem({ id, text, completed }: TodoItemProps) {
 }
 
 export default TodoItem
-// =====================================
-// END: src/components/todoitem.tsx
-// =====================================
 
 
-// =====================================
-// START: src/components/todolist.tsx
-// =====================================
+// src/components/todolist.tsx
 import { useSelector } from 'react-redux'
 import { RootState } from '../store/store'
 import TodoItem from './todoitem'
@@ -175,14 +153,9 @@ function TodoList() {
 }
 
 export default TodoList
-// =====================================
-// END: src/components/todolist.tsx
-// =====================================
 
 
-// =====================================
-// START: src/app.tsx
-// =====================================
+// src/app.tsx
 import './app.css'
 import AddTodo from './components/addtodo'
 import TodoList from './components/todolist'
@@ -198,14 +171,9 @@ function App() {
 }
 
 export default App
-// =====================================
-// END: src/app.tsx
-// =====================================
 
 
-// =====================================
-// START: src/main.tsx
-// =====================================
+// src/main.tsx
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { Provider } from 'react-redux'
@@ -220,6 +188,3 @@ createRoot(document.getElementById('root')!).render(
     </Provider>
   </StrictMode>,
 )
-// =====================================
-// END: src/main.tsx
-// =====================================

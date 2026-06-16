@@ -1,77 +1,4 @@
-/* =====================================
-   START (HTML): day3normal.html
-   =====================================
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Day 3</title>
-  <style>
-    body { padding-top: 30px; }
-    label, input { display: block; }
-
-    @keyframes fadeOut {
-      from { opacity: 1; }
-      to { opacity: 0; }
-    }
-    .fade {
-      animation: fadeOut 1s forwards;
-    }
-  </style>
-</head>
-<body>
-
-  <article>
-    <h1>Some Facts</h1>
-    <h2>The Chocolate</h2>
-    <h3>History of the chocolate</h3>
-    <p>Chocolate is made from tropical Theobroma cacao tree seeds.
-    Its earliest use dates back to the Olmec civilization in Mesoamerica.</p>
-    <p>After the European discovery of the Americas, chocolate became
-    very popular in the wider world, and its demand exploded.</p>
-    <p>Chocolate has since become a popular food product that millions enjoy every day,
-    thanks to its unique, rich, and sweet taste.</p>
-    <p>But what effect does eating chocolate have on our health?</p>
-  </article>
-  <button id="boldBtn">Make paragraphs bold</button>
-
-  <hr>
-
-  <form id="myForm">
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="firstname"><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lastname"><br><br>
-    <input type="submit" value="Submit" id="submit">
-  </form>
-  <ul class="usersAnswer"></ul>
-
-  <hr>
-
-  <p id="boldPara"><strong>Hello</strong> I hope you are enjoying <strong>this</strong> class. At the
-  <strong>end</strong> you <strong>will</strong> be great Developers!
-  <strong>Enjoy</strong> the <strong>JavaScript </strong> lessons</p>
-
-  <hr>
-
-  <p>Input radius value and get the volume of a sphere.</p>
-  <form id="MyForm">
-    <label for="radius">Radius</label><input type="text" name="radius" id="radius" required>
-    <label for="volume">Volume</label><input type="text" name="volume" id="volume">
-    <input type="submit" value="Calculate" id="calcSubmit">
-  </form>
-
-  <script src="day3normal.js"></script>
-</body>
-</html>
-   =====================================
-   END (HTML): day3normal.html
-   ===================================== */
-
-
-// =====================================
-// START: day3normal.js
-// =====================================
+// day3normal.js
 // Exercise 1
 const h1 = document.querySelector("h1")
 console.log(h1)
@@ -157,61 +84,9 @@ sphereForm.addEventListener("submit", function(event) {
     const volume = (4/3) * Math.PI * Math.pow(radius, 3)
     document.getElementById("volume").value = volume.toFixed(2)
 })
-// =====================================
-// END: day3normal.js
-// =====================================
 
 
-/* =====================================
-   START (HTML): day3normal2.html
-   =====================================
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Day 3 part 2</title>
-  <style>
-    #container p {
-      background: yellow;
-      color: red;
-    }
-    #container2 {
-      width: 400px;
-      height: 400px;
-      position: relative;
-      background: yellow;
-    }
-    #animate {
-      width: 50px;
-      height: 50px;
-      position: absolute;
-      background-color: red;
-    }
-  </style>
-</head>
-<body>
-
-  <div id="container"></div>
-  <button id="clear">Clear Interval</button>
-
-  <br><br>
-
-  <p><button onclick="myMove()">Click Me</button></p>
-  <div id="container2">
-    <div id="animate"></div>
-  </div>
-
-  <script src="day3normal2.js"></script>
-</body>
-</html>
-   =====================================
-   END (HTML): day3normal2.html
-   ===================================== */
-
-
-// =====================================
-// START: day3normal2.js
-// =====================================
+// day3normal2.js
 // Exercise 1
 // part 1
 setTimeout(function() {
@@ -251,6 +126,3 @@ function myMove() {
         }
     }, 1)
 }
-// =====================================
-// END: day3normal2.js
-// =====================================

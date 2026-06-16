@@ -1,6 +1,4 @@
-# =====================================
-# START: day1excersise1.py
-# =====================================
+# day1excersise1.py
 for greeting in range(4):
    print("hello, world")
 print((99^3)*8)
@@ -37,14 +35,9 @@ height=float(input("Enter your height in cm: "))
 if height > 145:
    print("You are tall enough to ride the roller coaster!")
 else:   print("Sorry, you need to be taller to ride the roller coaster.")
-# =====================================
-# END: day1excersise1.py
-# =====================================
 
 
-# =====================================
-# START: day1excersise2.py
-# =====================================
+# day1excersise2.py
 for greeting in range(4):
    print("Hello, world")
 for interest in range(4):
@@ -58,14 +51,9 @@ elif number_month in {9,10,11}:
     print("Autumn")
 elif number_month in {12,1,2}:
     print("Winter")
-# =====================================
-# END: day1excersise2.py
-# =====================================
 
 
-# =====================================
-# START: day1excersise3.py
-# =====================================
+# day1excersise3.py
 print(3<=3<9)
 # true
 print(3==3==3)
@@ -100,6 +88,3 @@ while True:
         print("Congratulations! You've set a new longest sentence without 'a'.")
     else:
         print("Your sentence is not longer than the previous one.")
-# =====================================
-# END: day1excersise3.py
-# =====================================

@@ -1,6 +1,4 @@
-// =====================================
-// START: src/components/greeting.tsx
-// =====================================
+// src/components/greeting.tsx
 interface GreetingProps {
   name: string
   messageCount: number
@@ -16,14 +14,9 @@ function Greeting({ name, messageCount }: GreetingProps) {
 }
 
 export default Greeting
-// =====================================
-// END: src/components/greeting.tsx
-// =====================================
 
 
-// =====================================
-// START: src/components/counter.tsx
-// =====================================
+// src/components/counter.tsx
 import { useState } from 'react'
 
 function Counter() {
@@ -52,14 +45,9 @@ function Counter() {
 }
 
 export default Counter
-// =====================================
-// END: src/components/counter.tsx
-// =====================================
 
 
-// =====================================
-// START: src/components/usercard.tsx
-// =====================================
+// src/components/usercard.tsx
 interface UserCardProps {
   name?: string
   age?: number
@@ -77,14 +65,9 @@ function UserCard({ name = 'Unknown User', age, role = 'No role assigned' }: Use
 }
 
 export default UserCard
-// =====================================
-// END: src/components/usercard.tsx
-// =====================================
 
 
-// =====================================
-// START: src/components/userlist.tsx
-// =====================================
+// src/components/userlist.tsx
 import { useState, useEffect } from 'react'
 
 interface User {
@@ -136,14 +119,9 @@ function UserList() {
 }
 
 export default UserList
-// =====================================
-// END: src/components/userlist.tsx
-// =====================================
 
 
-// =====================================
-// START: src/app.tsx
-// =====================================
+// src/app.tsx
 import './app.css'
 import Greeting from './components/greeting'
 import Counter from './components/counter'
@@ -170,14 +148,9 @@ function App() {
 }
 
 export default App
-// =====================================
-// END: src/app.tsx
-// =====================================
 
 
-// =====================================
-// START: src/main.tsx
-// =====================================
+// src/main.tsx
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
@@ -188,6 +161,3 @@ createRoot(document.getElementById('root')!).render(
     <App />
   </StrictMode>,
 )
-// =====================================
-// END: src/main.tsx
-// =====================================

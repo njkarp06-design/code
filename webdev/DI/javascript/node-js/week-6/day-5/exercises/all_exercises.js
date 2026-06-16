@@ -1,6 +1,4 @@
-// =====================================
-// START: exercise1/routes/index.js
-// =====================================
+// exercise1/routes/index.js
 const express = require("express")
 const router = express.Router()
 
@@ -13,14 +11,9 @@ router.get("/about", (req, res) => {
 })
 
 module.exports = router
-// =====================================
-// END: exercise1/routes/index.js
-// =====================================
 
 
-// =====================================
-// START: exercise1/app.js
-// =====================================
+// exercise1/app.js
 const express = require("express")
 const router = require("./routes/index")
 
@@ -31,14 +24,9 @@ app.use("/", router)
 app.listen(3000, () => {
     console.log("Server running on http://localhost:3000")
 })
-// =====================================
-// END: exercise1/app.js
-// =====================================
 
 
-// =====================================
-// START: exercise2/routes/todos.js
-// =====================================
+// exercise2/routes/todos.js
 const express = require("express")
 const router = express.Router()
 
@@ -80,14 +68,9 @@ router.delete("/:id", (req, res) => {
 })
 
 module.exports = router
-// =====================================
-// END: exercise2/routes/todos.js
-// =====================================
 
 
-// =====================================
-// START: exercise2/app.js
-// =====================================
+// exercise2/app.js
 const express = require("express")
 const todosRouter = require("./routes/todos")
 
@@ -99,14 +82,9 @@ app.use("/todos", todosRouter)
 app.listen(3000, () => {
     console.log("Server running on http://localhost:3000")
 })
-// =====================================
-// END: exercise2/app.js
-// =====================================
 
 
-// =====================================
-// START: exercise3/routes/books.js
-// =====================================
+// exercise3/routes/books.js
 const express = require("express")
 const router = express.Router()
 
@@ -150,14 +128,9 @@ router.delete("/:id", (req, res) => {
 })
 
 module.exports = router
-// =====================================
-// END: exercise3/routes/books.js
-// =====================================
 
 
-// =====================================
-// START: exercise3/app.js
-// =====================================
+// exercise3/app.js
 const express = require("express")
 const booksRouter = require("./routes/books")
 
@@ -169,6 +142,3 @@ app.use("/books", booksRouter)
 app.listen(3000, () => {
     console.log("Server running on http://localhost:3000")
 })
-// =====================================
-// END: exercise3/app.js
-// =====================================

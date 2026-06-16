@@ -1,6 +1,4 @@
-// =====================================
-// START: day1normal.js
-// =====================================
+// day1normal.js
 // Excersise 1 : Favorite Colors
 
 const colors = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
@@ -87,14 +85,9 @@ const passedStudents = students.filter(student => student.isPassed === true);
 console.log(passedStudents)
 const congratulations = passedStudents.forEach(student => console.log(`Good job ${student.name}, you passed the course in ${student.course}`))
 console.log(congratulations)
-// =====================================
-// END: day1normal.js
-// =====================================
 
 
-// =====================================
-// START: day1gold.js
-// =====================================
+// day1gold.js
 // Excersise 1
 [1, 2, 3].map(num => {
   if (typeof num === 'number') return num * 2;
@@ -111,6 +104,3 @@ console.log(congratulations)
   [1, 2],
 );
 // The result of the code will be [1, 2, 0, 1, 2, 3] as the reduce method is used to execute a reducer function on each element of the array, resulting in a single output value. In this case, the reducer function takes an accumulator (acc) and the current value (cur) and concatenates them together using the concat method. The initial value of the accumulator is set to [1, 2], so when the reduce method is called on the array [[0, 1], [2, 3]], it will concatenate [1, 2] with [0, 1] and then concatenate that result with [2, 3], resulting in [1, 2, 0, 1, 2, 3].
-// =====================================
-// END: day1gold.js
-// =====================================

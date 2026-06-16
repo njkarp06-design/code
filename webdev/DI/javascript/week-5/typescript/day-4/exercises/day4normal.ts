@@ -111,7 +111,7 @@ interface User {
 }
 
 interface PremiumUser extends User {
-  membershipLevel?: "bronze" | "silver" | "gold"; // optional
+  membershipLevel?: "bronze" | "silver" | "gold";
 }
 
 function printUserDetails(user: PremiumUser): void {
@@ -119,7 +119,6 @@ function printUserDetails(user: PremiumUser): void {
   console.log(`Name:  ${user.name}`);
   console.log(`Email: ${user.email}`);
   console.log(`Membership: ${user.membershipLevel ?? "No membership level set"}`);
-  console.log("-------------------");
 }
 
 const premiumUser: PremiumUser = {
