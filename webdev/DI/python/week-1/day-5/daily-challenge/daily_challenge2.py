@@ -1,66 +1,19 @@
 import random
 
-wordslist = ['correction', 'childish', 'beach', 'python', 'assertive', 'interference', 'complete', 'share', 'credit card', 'rush', 'south']
-word = random.choice(wordslist)
+list_of_numbers = [random.randint(0, 10000) for _ in range(20000)]
+target_number = 3728
 
-### YOUR CODE STARTS FROM HERE ###
+seen = set()
+pairs = set()
 
-body_parts = ["head", "body", "left arm", "right arm", "left leg", "right leg"]
+for num in list_of_numbers:
+    complement = target_number - num
+    if complement in seen:
+        pair = (min(num, complement), max(num, complement))
+        pairs.add(pair)
+    seen.add(num)
 
-def show_word(word, guessed):
-    result = ""
-    for letter in word:
-        if letter == " ":
-            result += "  "
-        elif letter in guessed:
-            result += letter + " "
-        else:
-            result += "* "
-    print(result.strip())
+for pair in pairs:
+    print(str(pair[0]) + " and " + str(pair[1]) + " sums to " + str(target_number))
 
-def word_solved(word, guessed):
-    for letter in word:
-        if letter != " " and letter not in guessed:
-            return False
-    return True
-
-word = random.choice(wordslist)
-guessed = []
-wrong = 0
-
-print("Welcome to Hangman!")
-
-while wrong < 6:
-    print("\nWord: ", end="")
-    show_word(word, guessed)
-
-    if word_solved(word, guessed):
-        print("You guessed it! The word was: " + word)
-        break
-
-    bad = [g for g in guessed if g not in word]
-    if bad:
-        print("Wrong guesses:", ", ".join(bad))
-    print("Body parts added:", ", ".join(body_parts[:wrong]) if wrong > 0 else "none")
-
-    guess = input("Guess a letter: ").lower()
-
-    if len(guess) != 1 or not guess.isalpha():
-        print("Enter a single letter.")
-        continue
-
-    if guess in guessed:
-        print("Already tried that letter.")
-        continue
-
-    guessed.append(guess)
-
-    if guess not in word:
-        print("Wrong! Added: " + body_parts[wrong])
-        wrong += 1
-    else:
-        print("Correct!")
-
-if wrong == 6:
-    print("\nGame over! The word was: " + word)
-    print("All body parts on the gallows: " + ", ".join(body_parts))
+print("Total pairs found:", len(pairs))
