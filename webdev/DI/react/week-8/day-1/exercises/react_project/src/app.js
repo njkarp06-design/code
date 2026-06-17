@@ -2,7 +2,6 @@ import logo from './logo.svg';
 import './app.css';
 import UserFavoriteAnimals from './userfavoriteanimals';
 import Exercise from './exercise3';
-import DailyChallenge from './dailychallenge';
 const myelement = <h1>"I love JSX!"</h1>;
 const sum = 5 + 5; 
 const multipleElement = <p>"React is {sum} times better with JSX"</p>;
@@ -33,7 +32,6 @@ function App() {
           Learn React
         </a>
       </header>
-      <DailyChallenge />
     </div>
   );
 }

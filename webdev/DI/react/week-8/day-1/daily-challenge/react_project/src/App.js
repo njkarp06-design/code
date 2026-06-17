@@ -21,7 +21,7 @@ const images = [
     }
 ]
 
-function DailyChallenge() {
+function App() {
     return (
         <div className="container mt-5">
             <h2 className="text-center mb-4">Travel Carousel</h2>
@@ -37,4 +37,4 @@ function DailyChallenge() {
     )
 }
 
-export default DailyChallenge
+export default App
