@@ -45,8 +45,37 @@ const changeEnough = (itemPrice, amountOfChange) => {
     changeEnough(4.25, [25,20,5,0])
     changeEnough(14.11, [2,100,0,0])
     //Excersise 4
-    const hotelcost = (numNights, nightCost) => {
-     console.log(numNights * nightCost);
-     }
-     hotelcost(13, 140)
+const hotelCost = () => {
+    let nights = prompt("How many nights?");
+    while (nights === "" || isNaN(nights) || nights === null) {
+        nights = prompt("How many nights?");
+    }
+    return nights * 140;
+}
+const planeRideCost = () => {
+    let destination = prompt("Where are you going?");
+    while (destination === "" || destination === null || !isNaN(destination)) {
+        destination = prompt("Where are you going?");
+    }
+    if (destination === "London") {return 183;}
+    else if (destination === "Paris") {return 220;}
+    else {return 300;}
+}
+const rentalCarCost = () => {
+    let days = prompt("How many days do you want the car?");
+    while (days === "" || isNaN(days) || days === null) {
+        days = prompt("How many days do you want the car?");
+    }
+    let cost = days * 40;
+    if (days > 10) {cost = cost - (cost * 0.05);}
+    return cost;
+}
+const totalVacationCost = () => {
+    const car = rentalCarCost();
+    const hotel = hotelCost();
+    const plane = planeRideCost();
+    console.log(`The car cost: $${car}, the hotel cost: $${hotel}, the plane tickets cost: $${plane}`);
+    return car + hotel + plane;
+}
+console.log(totalVacationCost());
 

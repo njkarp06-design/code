@@ -1,22 +1,16 @@
+// Exercise 1
 const people = ["Greg", "Mary", "Devon", "James"];
 people.shift();
-console.log(people);
-people[3] = "Jason";
-console.log(people);
+people[2] = "Jason";
 people.push("Natanel");
-console.log(people);
-people.indexOf("Mary");
-console.log(people);
-people.slice(1,4);
-console.log(people);
-people.indexOf("Foo"); 
-// returns -1 because Foo is not an element in the array.
-last="x";
-array1= ["Greg", "Mary", "Devon", "Jason", "Natanel","x"];
-console.log(array1);
-array1.length;
-array1.indexOf("x");
-// the length of the array and the index of its last element are the same because the index starts at 0 and the length starts at 1.
+console.log(people.indexOf("Mary"));
+let copy = people.slice(1, 3);
+console.log(copy);
+console.log(people.indexOf("Foo"));
+// returns -1 because Foo is not in the array
+let last = people[people.length - 1];
+console.log(last);
+
 for (let person in people) {
     console.log(people[person]);
 }
@@ -26,10 +20,26 @@ for (let person in people) {
         break;
     }
 }
-colors=[ ,"red", "green", "blue", "yellow", "orange"];
-for (let color in colors) {
-    console.log("my #"+colors.indexOf(colors[color])+" is "+colors[color]);
+
+// Exercise 2
+const colors = ["blue", "red", "green", "black", "purple"];
+for (let i = 0; i < colors.length; i++) {
+    console.log("My #" + (i + 1) + " choice is " + colors[i]);
 }
+let suffixes = ["st", "nd", "rd", "th", "th"];
+for (let i = 0; i < colors.length; i++) {
+    console.log("My " + (i + 1) + suffixes[i] + " choice is " + colors[i]);
+}
+
+// Exercise 3
+let num = prompt("give me a number");
+console.log(typeof num);
+num = Number(num);
+while (num < 10) {
+    num = Number(prompt("give me a number that is 10 or bigger"));
+}
+
+// Exercise 4
 const building = {
     numberOfFloors: 4,
     numberOfAptByFloor: {
@@ -46,16 +56,18 @@ const building = {
     },
 }
 console.log(building.numberOfFloors);
-console.log(building.numberOfAptByFloor.firstFloor);
-console.log(building.numberOfAptByFloor.thirdFloor);
+console.log(building.numberOfAptByFloor.firstFloor + building.numberOfAptByFloor.thirdFloor);
 console.log(building.nameOfTenants[1], building.numberOfRoomsAndRent.dan[0]);
 if (building.numberOfRoomsAndRent.sarah[1] + building.numberOfRoomsAndRent.david[1] > building.numberOfRoomsAndRent.dan[1]) {
-    console.log(building.numberOfRoomsAndRent.dan[1] + 200);
+    building.numberOfRoomsAndRent.dan[1] = 1200;
 }
+console.log(building.numberOfRoomsAndRent.dan[1]);
+
+// Exercise 5
 let family = {
     dad : "philip",
     mum : "Juliet",
-    brother : "matti"   
+    brother : "matti"
 }
 for (let membertype in family) {
     console.log(membertype);
@@ -63,14 +75,20 @@ for (let membertype in family) {
 for (let membertype in family) {
     console.log(family[membertype]);
 }
+
+// Exercise 6
 const details = {
   my: 'name',
   is: 'Rudolf',
   the: 'reindeer'
 }
+let sentence = "";
 for (let key in details) {
-    console.log(key + " " + details[key]);
+    sentence += key + " " + details[key] + " ";
 }
+console.log(sentence.trim());
+
+// Exercise 7
 const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
-const societyname=names.map(name => name[0]).sort().join("");
+const societyname = names.map(name => name[0]).sort().join("");
 console.log(societyname);
