@@ -1,18 +1,15 @@
-// Excersise 1
-let array = ["*", "**", "***", "****", "*****", "******"]
-const pattern = () => {
-    for (let i = 0; i < 6; i++)
-        console.log(array[i])
-};
-pattern()
-// Excersise 2
-let array2 = ["*", "**", "***", "****", "*****", "******"]
-const pattern2 = () => {
-for (let i = 0; i < 1; i++) {
-    console.log(array2[i])
-    for (let i = 1; i < 6; i++) {
-        console.log(array2[i])
+// one loop
+let stars = "";
+for (let i = 0; i < 6; i++) {
+    stars += "* ";
+    console.log(stars);
+}
+
+// nested for loops
+for (let i = 1; i <= 6; i++) {
+    let row = "";
+    for (let j = 0; j < i; j++) {
+        row += "* ";
     }
+    console.log(row);
 }
-}
-pattern2()
