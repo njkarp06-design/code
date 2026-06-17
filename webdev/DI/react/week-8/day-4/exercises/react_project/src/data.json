@@ -1,0 +1,14 @@
+{
+  "FullName": "Jhon Doe",
+  "Age": 33,
+  "SocialMedias": ["facebook", "instagram", "twitter"],
+  "Skills": {
+    "FrontEnd": ["html", "css", "javascript", "react"],
+    "BackEnd": ["node", "express", "mongodb"]
+  },
+  "Experiences": [
+    { "title": "Frontend Developer", "company": "Google", "years": 2 },
+    { "title": "Fullstack Developer", "company": "Amazon", "years": 3 },
+    { "title": "Backend Developer", "company": "Netflix", "years": 1 }
+  ]
+}

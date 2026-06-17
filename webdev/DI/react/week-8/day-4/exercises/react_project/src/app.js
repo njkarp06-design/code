@@ -1,94 +1,90 @@
-import React from 'react';
-import { ThemeProvider, useTheme } from './themecontext';
-import ThemeToggle from './themetoggle';
-import CharacterCounter from './charactercounter';
-import './app.css';
+import React from 'react'
+import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom"
+import "bootstrap/dist/css/bootstrap.min.css"
+import ErrorBoundary from './errorboundary'
+import PostList from './postlist'
+import Example1 from './example1'
+import Example2 from './example2'
+import Example3 from './example3'
+import './app.css'
 
-const themeStyles = {
-  light: {
-    pageBg: '#f9f9f9',
-    text: '#222',
-    subText: '#555',
-    cardBg: '#fff',
-    border: '1px solid #ddd',
-    divider: '#ddd',
-    codeColor: '#c0392b',
-  },
-  dark: {
-    pageBg: '#1e1e2e',
-    text: '#e0e0e0',
-    subText: '#aaa',
-    cardBg: '#2a2a3e',
-    border: '1px solid #444',
-    divider: '#444',
-    codeColor: '#e07b54',
-  },
-};
-
-function PageContent() {
-  const { theme } = useTheme();
-  const s = themeStyles[theme];
-
+function HomeScreen() {
   return (
-    <div
-      style={{
-        minHeight: '100vh',
-        background: s.pageBg,
-        color: s.text,
-        fontFamily: 'sans-serif',
-        transition: 'background 0.3s, color 0.3s',
-      }}
-    >
-      <div style={{ maxWidth: '700px', margin: '0 auto', padding: '30px 20px' }}>
-        <h1>Week 8 - Day 4 Mini Project</h1>
+    <div>
+      <h1>home</h1>
 
-        {/* Exercise 1 */}
-        <h2>Exercise 1: Theme Switcher</h2>
-        <p style={{ color: s.subText }}>
-          Current theme: <strong>{theme}</strong>
-        </p>
+      <h2>Exercise 2: PostList</h2>
+      <PostList />
 
-        <div
-          style={{
-            padding: '20px',
-            border: s.border,
-            borderRadius: '8px',
-            background: s.cardBg,
-            display: 'flex',
-            alignItems: 'center',
-            gap: '14px',
-          }}
-        >
-          <span>Toggle the theme:</span>
-          <ThemeToggle />
-        </div>
-
-        <hr style={{ borderColor: s.divider, margin: '40px 0' }} />
-
-        {/* Exercise 2 */}
-        <h2>Exercise 2: Character Counter</h2>
-
-        <div
-          style={{
-            padding: '20px',
-            border: s.border,
-            borderRadius: '8px',
-            background: s.cardBg,
-          }}
-        >
-          <CharacterCounter theme={theme} />
-        </div>
-      </div>
+      <h2>Exercise 3: Parse JSON</h2>
+      <Example1 />
+      <Example2 />
+      <Example3 />
     </div>
-  );
+  )
+}
+
+function ProfileScreen() {
+  return <h1>profile</h1>
+}
+
+function ShopScreen() {
+  throw new Error('shop crashed')
 }
 
 function App() {
+  const url = 'https://webhook.site/your-unique-url'
+
+  async function sendData() {
+    let response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        key1: 'myusername',
+        email: 'mymail@gmail.com',
+        name: 'Isaac',
+        lastname: 'Doe',
+        age: 27
+      })
+    })
+    let data = await response.text()
+    console.log(data)
+  }
+
   return (
-    <ThemeProvider>
-      <PageContent />
-    </ThemeProvider>
-  );
+    <BrowserRouter>
+      <nav className="navbar navbar-expand bg-light">
+        <div className="container-fluid">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/">Home</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/profile">Profile</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/shop">Shop</NavLink>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div style={{ padding: '20px' }}>
+        <h2>Exercise 4: Post JSON Data</h2>
+        <button onClick={sendData}>Send Data</button>
+
+        <hr />
+
+        <Routes>
+          <Route path="/" element={<ErrorBoundary><HomeScreen /></ErrorBoundary>} />
+          <Route path="/profile" element={<ErrorBoundary><ProfileScreen /></ErrorBoundary>} />
+          <Route path="/shop" element={<ErrorBoundary><ShopScreen /></ErrorBoundary>} />
+        </Routes>
+      </div>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
