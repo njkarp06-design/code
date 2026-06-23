@@ -9,6 +9,8 @@ class Text:
     def word_frequency(self, word):
         words = self.text.split()
         count = words.count(word)
+        if count == 0:
+            return None
         return count
 
     def most_common_word(self):
