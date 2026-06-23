@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head") %>
+<body>
+    <%- include("../partials/header") %>
+    <div class="container mt-4">
+        <h1 class="mb-4">Search Facts</h1>
+
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <form action="/search/title" method="POST" class="d-flex">
+                    <input type="text" name="title" class="form-control me-2" placeholder="Search by title">
+                    <button type="submit" class="btn btn-dark">Search</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <form action="/search/category" method="POST" class="d-flex">
+                    <select name="category" class="form-select me-2">
+                        <% categories.forEach(c => { %>
+                            <option value="<%= c %>"><%= c %></option>
+                        <% }) %>
+                    </select>
+                    <button type="submit" class="btn btn-dark">Search</button>
+                </form>
+            </div>
+        </div>
+
+        <%- include("../partials/posts") %>
+    </div>
+    <%- include("../partials/footer") %>
+</body>
+</html>
